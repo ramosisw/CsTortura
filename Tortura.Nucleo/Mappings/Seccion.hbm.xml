@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Tortura.Nucleo.Entidades.Seccion, Tortura.Nucleo" table="Seccion" lazy="false">
+    <id name="Id" type="int">
+      <column name="id"/>
+      <generator class="identity" />
+    </id>
+    <property name="Nombre" type="string">
+      <column name="nombre"/>
+    </property>
+    <property name="Precio" type="double">
+      <column name="precio"/>
+    </property>
+    <property name="Capacidad" type="int">
+      <column name="capacidad"/>
+    </property>
+    <many-to-one name="Evento" class="Tortura.Nucleo.Entidades.Evento" column="idEvento"/>
+    <property name="Clave" type="string">
+      <column name="clave"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Tortura.Nucleo.Entidades.Usuario, Tortura.Nucleo" table="Usuario" lazy="false">
+    <id name="Id" type="int">
+      <column name="id"/>
+      <generator class="identity" />
+    </id>
+    <property name="Nombre" type="string">
+      <column name="nombre"/>
+    </property>
+    <property name="Apellidos" type="string">
+      <column name="apellidos"/>
+    </property>
+    <property name="CorreoElectronico" type="string">
+      <column name="correoElectronico"/>
+    </property>
+    <property name="Telefono" type="string">
+      <column name="telefono"/>
+    </property>
+    <property name="FechaNacimiento" type="datetime">
+      <column name="fechaNacimiento"/>
+    </property>
+    <property name="Tipo">
+      <column name="tipo"/>
+    </property>
+  </class>
+</hibernate-mapping>

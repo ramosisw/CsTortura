@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Tortura.Nucleo.Entidades.Boleto, Tortura.Nucleo" table="Boleto" lazy="false">
+    <id name="Id" type="int">
+      <column name="id"/>
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Cliente" class="Tortura.Nucleo.Entidades.Usuario" column="idUsuario"/>
+    <property name="Folio" type="string">
+      <column name="folio"/>
+    </property>
+    <property name="NombreAsistente" type="string">
+      <column name="nombreAsistente"/>
+    </property>
+    <property name="FechaVenta" type="datetime">
+      <column name="fechaVenta"/>
+    </property>
+    <many-to-one name="Seccion" class="Tortura.Nucleo.Entidades.Seccion" column="idSeccion"/>
+  </class>
+</hibernate-mapping>
